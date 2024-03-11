@@ -1,0 +1,51 @@
+<h2 class="text-center mt-4">More Details</h2>
+<div class="container  mt-4">
+    <!--
+            <div class="card justify-content-center w-25 ">
+                <div class="card-body">
+                    <h5 class="card-subtext"># ID</h5>
+                    <h4 class="card-title ">Name</h4>
+                    <p class="card-subtext">Author</p>
+                    <p class="card-subtext">Description</p>
+                    <p class="card-subtext">IsActive</p>
+
+                    <div class="d-flex justify-content-between">
+                        <a href="" class="btn btn-secondary">Update</a>
+
+                        <a href="" class="btn btn-warning">Back</a>
+
+                        <a href="" class="btn btn-danger ">Delete</a>
+                    </div>
+                </div>
+             
+            </div>
+
+        -->
+
+    <!-- Matiral  -->
+    <div>
+
+        <mat-card class="w-25" style="background-color: aliceblue;">
+            <mat-card-header>
+                <mat-card-title>{{book.bookId}}</mat-card-title>
+                <mat-card-title style="color: blue;">{{book.name}}</mat-card-title>
+                <mat-card-subtitle>{{book.author}}</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content class="mt-2">
+                <p>{{ book.description }}</p>
+            </mat-card-content>
+
+
+            <div class=" my-3 ">
+                <input type="checkbox" [checked]="book.isActive" class="mx-3" id="exampleCheck1" name="IsActive">
+                <label> {{book.isActive | isActive }} </label>
+            </div>
+            <!-- <mat-card-actions class="mt-4 justify-content-between">
+                <button class="btn btn-outline-success" routerLink="/Update">Update</button>
+
+                <button class="btn btn-outline-danger">Delete</button>
+            </mat-card-actions> -->
+        </mat-card>
+        <button class="btn btn-outline-warning mt-2" routerLink="/">Back</button>
+    </div>
+</div>

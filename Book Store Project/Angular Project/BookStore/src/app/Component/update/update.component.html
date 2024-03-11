@@ -1,0 +1,23 @@
+<div class="container m-5 w-50 p-5">
+ 
+    <h3 class="text-align-center"> Update Information  </h3>
+    <form [formGroup]="bookForm" (ngSubmit)="onSubmit()">
+
+    <input id="name" type="text" class="form-control mt-3" formControlName="name"  placeholder="Name">
+
+    <input id="author" type="text" class="form-control mt-3" formControlName="author"  placeholder="Author Name">
+
+    <textarea id="description" class="form-control mt-3 w-100" formControlName="description" placeholder="Enter Description" > </textarea>
+
+    <div class="form-check mt-3 justify-content-between d-flex">
+        <input type="checkbox" class="form-check-input" formControlName="isActive"   id="exampleCheck1" name="IsActive">
+        <label class="form-check-label" for="exampleCheck1"> {{book.isActive | isActive }} </label>
+    </div> 
+    
+    <div class="w-25 justify-content-between d-flex">
+        <button type="submit" class="btn btn-outline-success mx-3">Update</button>
+        <a class="btn btn-outline-warning " routerLink="/">Back</a>
+    </div>
+</form>
+
+</div>
